@@ -1,0 +1,61 @@
+<!doctype html>
+<div class="brand">GS Cart</div>
+<div class="search">
+<input id="search-input" placeholder="Search products, e.g. headphones" />
+<button id="search-btn">Search</button>
+</div>
+<div class="actions">
+<button id="cart-toggle">Cart (<span id="cart-count">0</span>)</button>
+</div>
+</header>
+
+
+<main class="container">
+<aside class="filters">
+<h4>Categories</h4>
+<ul id="category-list">
+<li data-cat="">All</li>
+<li data-cat="Electronics">Electronics</li>
+<li data-cat="Peripherals">Peripherals</li>
+<li data-cat="Accessories">Accessories</li>
+</ul>
+</aside>
+
+
+<section class="products">
+<div id="product-grid" class="grid"></div>
+</section>
+</main>
+
+
+<!-- cart panel -->
+<div id="cart-panel" class="cart-panel hidden">
+<h3>Your cart</h3>
+<div id="cart-items"></div>
+<div class="cart-summary">
+<div>Total: ₹<span id="cart-total">0</span></div>
+<button id="checkout-btn">Checkout</button>
+</div>
+</div>
+
+
+<!-- checkout modal -->
+<div id="checkout-modal" class="modal hidden">
+<div class="modal-inner">
+<h3>Checkout (Simulated)</h3>
+<label>Name</label>
+<input id="checkout-name" />
+<label>Address</label>
+<textarea id="checkout-address"></textarea>
+<div style="display:flex;gap:8px;margin-top:10px">
+<button id="pay-btn">Pay (Simulated)</button>
+<button id="cancel-checkout">Cancel</button>
+</div>
+<div class="hint">This demo simulates payments — do not enter real card details.</div>
+</div>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
