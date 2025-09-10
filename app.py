@@ -1,5 +1,3 @@
-
----
 def api_set_cart_qty():
 data = request.get_json() or {}
 pid = data.get('product_id')
