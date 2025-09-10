@@ -1,11 +1,5 @@
-
-
 ---
-
-
 ## app.py
-
-
 ```python
 import os
 import uuid
