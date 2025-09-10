@@ -1,6 +1,3 @@
----
-## app.py
-```python
 import os
 import uuid
 from flask import Flask, render_template, jsonify, request, session
@@ -114,7 +111,7 @@ def api_checkout():
     for pid, qty in cart.items():
         p = next((x for x in PRODUCTS if x['id'] == pid), None)
         if not p:
-        continue
+            continue
         line = p['price'] * qty
         total += line
         items.append({'id': pid, 'title': p['title'], 'price': p['price'], 'qty': qty, 'line': line})
